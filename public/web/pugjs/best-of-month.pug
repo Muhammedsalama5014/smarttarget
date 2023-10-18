@@ -1,0 +1,30 @@
+extend index
+
+block pageindex
+ div.best-of-month
+  div(id="carouselExampleControls" class="carousel slide wow fadeInUp" data-wow-duration="1s" data-ride="carousel")
+   div.carousel-inner
+    div.carousel-item.active 
+     a(href="best-of-month-inner.html" class="photo")
+       img(src="images/month.jpg" alt="")
+     h2.title.text-center Best of May   
+    div.carousel-item
+     a(href="best-of-month-inner.html" class="photo")
+       img(src="images/month.jpg" alt="")
+     h2.title.text-center Best of Jun
+   ol(class="carousel-indicators")
+     li(data-target="#carouselExampleControls" data-slide-to="0" class="active")
+     li(data-target="#carouselExampleControls" data-slide-to="1")
+   
+   a(class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev")
+    svg(xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 11 14")
+     path(d="M1.5 2.66987L9 7L1.5 11.3301L1.5 2.66987Z" stroke-width="2") 
+    |  Prev
+   a(class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next")
+    | Next
+    svg(xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 11 14")
+     path(d="M1.5 2.66987L9 7L1.5 11.3301L1.5 2.66987Z" stroke-width="2")
+  include ../pugjs/dark.pug
+  <!--End dark-->   
+  //include ../pugjs/iconssocial.pug
+  <!--End iconssocial-->    

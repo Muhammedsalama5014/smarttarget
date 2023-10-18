@@ -1,0 +1,153 @@
+ .footer {
+     @include section;
+     overflow: hidden;
+     background: $colortitle;
+     padding: $zero !important;
+     @include transition(all 0.5s ease-in-out 0s);
+     .icons {
+         display: flex;
+         align-items: center;
+         position: relative;
+         width: $fullwidth;
+         background: $dark;
+         min-height: 52px;
+         .social {
+             @include socialstyle;
+         }
+     }
+     .item {
+         margin-top: $com-spacing-6;
+         @media (max-width: 991px) {
+             max-width: $fullwidth;
+             flex: $fullwidth;
+         }
+         .logo {
+             @media (max-width: 991px) {
+                 @include flex;
+                 width: $fullwidth;
+             }
+             img {
+                 max-width: 200px;
+             }
+         }
+         p {
+             color: $white;
+             @media (max-width: 991px) {
+                 text-align: center;
+             }
+         }
+         .title {
+             color: $white;
+             font-size: 32px;
+             font-weight: 400;
+             text-transform: capitalize;
+             @media (max-width: 991px) {
+                 font-size: 22px;
+                 text-align: center;
+             }
+         }
+         .itfoot {
+             margin-top: $com-spacing-4;
+             max-width: 25%;
+             flex: 25%;
+             @media (max-width: 450px) {
+                 max-width: 50%;
+                 flex: 50%;
+             }
+             &::after {
+                 content: "";
+                 position: absolute;
+                 left: $com-spacing-3;
+                 bottom: -12px;
+                 width: 36px;
+                 height: 2px;
+                 background: $white;
+             }
+             .inner {
+                 position: relative;
+                 width: $fullwidth;
+                 height: 86px;
+                 background: $textlight;
+                 overflow: hidden;
+                 img {
+                     width: $fullwidth;
+                     height: $fullwidth;
+                     object-fit: cover;
+                 }
+             }
+         }
+     }
+     .copyright {
+         position: relative;
+         margin-top: $com-spacing-8;
+         padding: $com-spacing-4 $com-spacing-3;
+         width: $fullwidth;
+         border-top: 1px solid #ffffff38;
+         z-index: 2;
+         @media (max-width: 991px) {
+             margin-top: $com-spacing-7;
+         }
+         p {
+             padding: $zero $com-spacing-3;
+             text-align: center;
+             color: $white;
+         }
+     }
+     .scrollToTop {
+         @include position(fixed, $right: $com-spacing-4, $bottom: $com-spacing-4);
+         width: 46px;
+         height: 46px;
+         z-index: 998;
+         padding: $zero;
+         font-size: 12px;
+         text-align: center;
+         @include border-radius($zero);
+         background: $blue;
+         padding-top: 11px;
+         display: $none;
+         &:before {
+             @include overlay;
+             background: $dark;
+             -webkit-transform: scale(0);
+             transform: scale(0);
+             @include transition(all 0.6s ease-in-out 0s);
+         }
+         span {
+             position: relative;
+             z-index: 1;
+             color: $white;
+         }
+         &:hover {
+             &::before {
+                 -webkit-transform: scale(1);
+                 transform: scale(1);
+             }
+         }
+         @media (max-width: 991px) {
+             display: $none !important;
+         }
+     }
+ }
+ 
+ .m-contact {
+     display: flex;
+     align-items: flex-start;
+     margin-top: $com-spacing-3;
+     @media (max-width: 991px) {
+         justify-content: center;
+     }
+     svg {
+         fill: $white;
+         min-width: 16px;
+         max-width: 16px;
+         margin: $com-spacing-2 $com-spacing-2 $zero $zero;
+     }
+     p,
+     a {
+         color: $white;
+         @include transition(all 0.5s ease-in-out 0s);
+     }
+     a:hover {
+         color: $dark;
+     }
+ }

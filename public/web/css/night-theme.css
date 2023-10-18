@@ -1,0 +1,244 @@
+body,
+.banner-slider .section {
+    background: #202043 url(../images/bg.png) repeat center center;
+}
+
+.minteams .item .inner,
+.hiring .item .inner,
+.hiringinner .item .h-box,
+.modal .modal-lg .modal-content {
+    background: #1c1c2c;
+}
+
+.pricing .inner .list li:nth-of-type(odd) {
+    background: #161631;
+}
+
+.pricing .inner .items .in-item .priceinner {
+    background: #1e1f358f;
+}
+
+.pricing .inner .items .in-item:nth-of-type(odd) .priceinner {
+    background: #30314c87;
+}
+
+.header,
+.footer .icons {
+    background: #131313;
+}
+
+.pricing .inner .items .in-item .priceinner .de-price .title,
+.packages .item .inner .subspan,
+.pricing .innerdetels .detels .minheader .title,
+.pricingform .item .inner .title {
+    color: #65FDF0;
+}
+
+.bottom::before,
+.scroll::-webkit-scrollbar-thumb,
+.footer .item .itfoot::after {
+    background: #18AAE3;
+}
+
+.minarticles .item .content .minhead .listlike li.active svg,
+.footer .item .m-contact svg,
+.blog .minheader .formsearch .bottom svg path {
+    fill: #18AAE3 !important;
+}
+
+.banner-slider [data-fs-scroll] .page li {
+    border: 1px solid #fff;
+}
+
+.modal .modal-lg .modal-content .modal-header {
+    border-bottom: 1px solid #e9ecef21;
+}
+
+.color li.active,
+.minwork .v-item .inner,
+.blog .inner .item,
+.pagination li a,
+.pagination li span {
+    background: #1E1E1E !important;
+}
+
+.color li svg path {
+    fill: #202043;
+}
+
+.textlight,
+.footer .item .m-contact p,
+.footer .item .m-contact a,
+.hiring .item .inner .list li,
+.hiring .item .inner .respons,
+.hiringinner .item .h-box .detels .list li,
+.hiringinner .item .h-box .detels .respons {
+    color: #D9D9D9 !important;
+}
+
+.minteams .item .inner .photo {
+    background: url(../images/bc.png) no-repeat center center;
+}
+
+.color {
+    background: #353535;
+}
+
+.color li.active span,
+.header .menu-link,
+.iconssocial p,
+.minwork .nav-tabs li a,
+.minwork .v-item .inner .title,
+.minwork .v-item .inner .timebar .time,
+.minarticles .item .content .minhead .title,
+.minarticles .item .content .minhead .listlike li,
+.minteams .item .inner .title,
+.form-control,
+.contactus .title,
+.map .m-contact p,
+.map .m-contact a,
+.blog .inner .item .content .title,
+.pagination li a,
+.pagination li span,
+.blog .minheader .title,
+.blog .minheader .select .form-control,
+.blog .minheader .formsearch .form-control,
+.blog .minheader .formsearch .form-control::placeholder,
+.b-inner .title,
+.hiring .item .inner .title,
+.floating-label,
+.custom-file-label,
+.custom-file-input,
+.che-box span.label-text,
+.upload,
+.nots,
+.hiringinner .item .h-box .detels .title,
+.pricing .inner .list li,
+.pricing .inner .items .in-item .priceinner .de-price .n-price,
+.packages .item .inner .title,
+.packages .item .inner .list li span,
+.pricing .innerdetels .detels .minheader .price,
+.pricing .innerdetels .detels .list li,
+.pricingform .item .inner .list li,
+.pricingform .item .inner .price,
+.pricingform .item.s-add .inner .subspan,
+.banner-slider .section .container .subtitle,
+.best-of-month .carousel-control-next,
+.best-of-month .carousel-control-prev,
+.close,
+.slideservic .container .subtitle {
+    color: #fff !important;
+}
+
+.blog .minheader .select .form-control,
+.blog .minheader .formsearch .form-control,
+.best-of-month ol.carousel-indicators li,
+.slideservic .a-pos .carousel-indicators li {
+    border: 1px solid #fff;
+}
+
+select.form-control {
+    background: url(../images/arrow-w.svg) no-repeat;
+    background-position: 185px 19px;
+}
+
+.inpusrach .custom-file-input:lang(en)~.custom-file-label::after {
+    background: url(../images/up-w.svg) no-repeat center left;
+    color: #fff;
+}
+
+.color li.active svg path,
+.header .menu-link svg,
+.social a svg,
+.slick-prev svg,
+.slick-next svg,
+.minarticles .item .content .minhead .listlike li svg,
+.header .navbar .cancel svg path,
+.pagination li svg,
+.packages .item .inner .icon svg,
+.pricingform .item.s-add .inner .icon svg,
+.banner-slider .slider-upper-arrow svg,
+.banner-slider .slider-down-arrow svg,
+.banner-slider .section .icon svg path,
+.slideservic .container .icon svg path,
+.slideservic .carousel-control-next svg,
+.slideservic .carousel-control-prev svg,
+.b-inner .social a svg {
+    fill: #fff !important;
+}
+
+.popup-close svg path,
+.best-of-month .carousel-control-next svg path,
+.best-of-month .carousel-control-prev svg path {
+    stroke: #fff !important;
+}
+
+.header .burger-line {
+    background: #fff;
+}
+
+.minarticles .item .content {
+    background: rgba(19, 19, 19, 0.60);
+    backdrop-filter: blur(21px);
+}
+
+.contentpopup {
+    background: rgba(30, 30, 30, 0.94) url(../images/cont.png) no-repeat center right;
+    backdrop-filter: blur(13.5px);
+}
+
+.footer {
+    background: rgba(27, 26, 26, 0.50);
+    backdrop-filter: blur(6.5px);
+}
+
+#video-popup-overlay,
+#video-popup-overlay2,
+.detelsuser {
+    background: #000000de;
+}
+
+.footer .item .m-contact a:hover,
+.blog .inner .item .content .title:hover,
+.minwork .nav-tabs li a.active {
+    color: #18AAE3 !important;
+}
+
+.pricing .inner .items .in-item .priceinner .innerlist li svg path,
+.packages .item .inner .list li svg,
+.pricing .innerdetels .detels .list li svg,
+.pricingform .item .inner .list li svg {
+    fill: #FFB800;
+}
+
+.packages .item .inner {
+    background: rgba(27, 27, 27, 0.51);
+    backdrop-filter: blur(13.5px);
+}
+
+.pricing .innerdetels .detels,
+.pricingform .item .inner {
+    background: rgba(30, 30, 30, 0.94);
+    backdrop-filter: blur(13.5px);
+}
+
+.header .icon .searchicon svg path {
+    fill: #E5E5E5;
+}
+
+select.form-control option {
+    color: #202043;
+}
+
+@media screen and (max-width: 991px) {
+    .header .navbar {
+        background: #202043;
+    }
+    .header .navbar .menu-link,
+    .header .submenu .submenu-link {
+        color: #fff;
+    }
+    .header .submenu {
+        background: #f3f3f314 !important;
+    }
+}

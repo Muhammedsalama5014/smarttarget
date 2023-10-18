@@ -1,0 +1,64 @@
+extend index
+
+block pageindex
+ section.hiringinner
+  div(class='container')
+     div.row
+      div(class="col-sm-6 item wow fadeInLeft" data-wow-duration="1s")
+       div.h-box
+        div(class="photo")
+         img(src="images/hiring2.jpg" alt="" title="")
+        div.detels
+         h1.title Senior Creative Copywriter
+         div.w-100.mt-4
+          span.respons  Responsibilities
+          ul.list 
+           li Write copy for a variety of media including social, print, video, and online
+           li Edit and proof work to ensure high editorial standards are met across all content outputs
+           li Collaborate with creative, product, marketing, and legal to assess project needs and help with messaging
+           li Drive brand consistency across all company communications......
+         div.w-100.mt-4
+          span.respons  Requirements
+          ul.list 
+           li Bachelor’s degree in English, Journalism, Marketing, or Communications
+           li 3-5 years experience in content marketing or copywriting, preferably with an agency
+           li Knowledge of Microsoft Office Applications
+           li Strong creative thinking skills and ability to think conceptually
+         div.jobtype
+          p.textlight Job Type: #[span Full Time]
+          p.textlight Job Location: #[span Kuwait]
+      div(class="col-sm-5 item  wow fadeInRight" data-wow-duration="1s")
+        form(action="#" method="")
+         div.row
+          div(class="col-sm-12 inpusrach")
+           input(class="form-control" type="text" placeholder="" autocomplete="off" required)
+           label(class="floating-label") Name
+          div(class="col-sm-12 inpusrach")
+           input(class="form-control" type="text" placeholder="" autocomplete="off" required)
+           label(class="floating-label") Email Address  
+          div(class="col-sm-12 inpusrach")
+           input(class="form-control" type="text" placeholder="" autocomplete="off" required)
+           label(class="floating-label") Phone Number 
+          div(class="col-sm-12 inpusrach")
+           textarea(name="" class="form-control" placeholder="" autocomplete="off" required)
+           label(class="floating-label") Cover Letter
+          div(class="col-sm-12 inpusrach")
+            p.upload Upload CV/Resume
+            div.w-100.position-relative
+             input(type="file" class="custom-file-input" id="customFile" name="filename")
+             label(class="custom-file-label" for="customFile")   
+            span.nots Allowed Type(s): .pdf, .doc, .docx 
+          div(class="col-sm-12 inpusrach")
+           label.che-box 
+            input(type="checkbox" name="colorCheckbox" value="box-2")
+            span.label-text   By using this form you agree with the storage and handling of your data by this website.
+
+          div(class="col-sm-12 inpusrach")
+           button(class="btnbottom" type="submit")
+            | Send
+            svg(xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 11 14")
+             path(d="M1.5 2.66987L9 7L1.5 11.3301L1.5 2.66987Z" stroke-width="2")
+  include ../pugjs/dark.pug
+  <!--End dark-->   
+  // include ../pugjs/iconssocial.pug
+   <!--End iconssocial-->               

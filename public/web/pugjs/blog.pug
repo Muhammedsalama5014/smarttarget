@@ -1,0 +1,102 @@
+extend index
+
+block pageindex
+ div.slider.n-bg
+  div.photo
+    img(src='images/blogbanner.jpg' alt="Smart target" title="Smart target")
+  div.container
+   div
+    h1(class="title wow fadeInUp" data-wow-duration="1s") Blog
+    p(class="wow fadeInUp" data-wow-duration="3s")   
+     | Lorem ipsum dolor sit amet consectetur. Consequat mi tortor<br> bibendum nunc aliquet netus enim commodo.
+     a(class="btnbottom nav__link wow fadeInUp" href="#blog" data-wow-duration="3s") 
+      | Let’s Go
+      svg(xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 11 14")
+        path(d="M1.5 2.66987L9 7L1.5 11.3301L1.5 2.66987Z" stroke-width="2")
+  include ../pugjs/dark.pug
+  <!--End dark-->   
+  include ../pugjs/iconssocial.pug
+  <!--End iconssocial-->   
+ section.blog#blog
+  div.container
+   div(class="minheader wow fadeInUp" data-wow-duration="1s") 
+    div.select
+     select.form-control
+      option(value="")  Select Category 
+    h1.title knowledge is #[span  power.]
+    form(action="#" method="" class='formsearch')
+      input(class="form-control" type="text" placeholder="Search......")
+      button(class="bottom" type="submit")
+        svg(viewBox="0 0 28 28"  xmlns="http://www.w3.org/2000/svg")
+          path(d="M3.32241 19.3897C-1.10733 14.9599 -1.10724 7.75196 3.32241 3.32213C7.75224 -1.1077 14.9601 -1.1077 19.3898 3.32213C23.1479 7.08024 23.7171 12.6695 21.0988 17.0341C21.0988 17.0341 20.9108 17.3496 21.1648 17.6035C22.6138 19.0524 26.9613 23.4 26.9613 23.4C28.1151 24.5537 28.3897 26.1669 27.3666 27.1902L27.1904 27.3662C26.1673 28.3895 24.554 28.115 23.4003 26.9612C23.4003 26.9612 19.062 22.6228 17.6159 21.1768C17.3497 20.9107 17.0343 21.0987 17.0343 21.0987C12.6698 23.7169 7.08052 23.1478 3.32241 19.3897ZM17.2923 17.2921C20.5655 14.0189 20.5654 8.69311 17.2922 5.41992C14.019 2.14682 8.69322 2.14673 5.42011 5.41992C2.14692 8.69302 2.14692 14.0189 5.42011 17.2921C8.69331 20.5651 14.019 20.5651 17.2923 17.2921Z" fill="#8E8E8E")
+          path(d="M16.5678 10.6819C16.7202 10.6819 16.875 10.6519 17.0243 10.5889C17.6206 10.3365 17.8996 9.64845 17.6472 9.05204C16.061 5.3034 11.7208 3.54423 7.97225 5.13049C7.37594 5.38287 7.09695 6.07092 7.34933 6.66732C7.6018 7.26373 8.28967 7.54254 8.88626 7.29025C11.4438 6.20802 14.4053 7.40832 15.4874 9.96586C15.6767 10.4132 16.1109 10.6819 16.5678 10.6819Z" fill="#8E8E8E")
+          clipPath(id="clip0_1_322")
+           rect(width="28" height="28" fill="white" transform="matrix(-1 0 0 1 28 0)")
+   div.inner
+    div(class="item wow fadeInUp" data-wow-duration="1s") 
+     a(href="blog-inner.html" class="photo")
+      img(src="images/blog.jpg" alt="") 
+     div.content
+      a(href="blog-inner.html" class="title") Optimizing CSS for faster page loads 
+      p.textlight   Not long ago I decided to improve the loading times of my website. It already loads pretty fast, but I knew there was still room for improvement and one of them was CSS loading. I will walk you through the process and show you how you can improve your load times as well. <br><br>To see how CSS affects the load time of a webpage we first have to know how the browser converts an HTML document into a functional webpage...
+      div.btns
+       span.date 1 Hour Ago
+       a(href="blog-inner.html"  class="btnbottom") 
+        | Read Full
+        svg(xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 11 14")
+         path(d="M1.5 2.66987L9 7L1.5 11.3301L1.5 2.66987Z" stroke-width="2")
+    <!--End item-->
+    div(class="item wow fadeInUp" data-wow-duration="1s") 
+     a(href="blog-inner.html" class="photo")
+      img(src="images/blog.jpg" alt="") 
+     div.content
+      a(href="blog-inner.html" class="title") Optimizing CSS for faster page loads 
+      p.textlight   Not long ago I decided to improve the loading times of my website. It already loads pretty fast, but I knew there was still room for improvement and one of them was CSS loading. I will walk you through the process and show you how you can improve your load times as well. <br><br>To see how CSS affects the load time of a webpage we first have to know how the browser converts an HTML document into a functional webpage...
+      div.btns
+       span.date 1 Hour Ago
+       a(href="blog-inner.html"  class="btnbottom") 
+        | Read Full
+        svg(xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 11 14")
+         path(d="M1.5 2.66987L9 7L1.5 11.3301L1.5 2.66987Z" stroke-width="2")
+    <!--End item-->
+    div(class="item wow fadeInUp" data-wow-duration="1s") 
+     a(href="blog-inner.html" class="photo")
+      img(src="images/blog.jpg" alt="") 
+     div.content
+      a(href="blog-inner.html" class="title") Optimizing CSS for faster page loads 
+      p.textlight   Not long ago I decided to improve the loading times of my website. It already loads pretty fast, but I knew there was still room for improvement and one of them was CSS loading. I will walk you through the process and show you how you can improve your load times as well. <br><br>To see how CSS affects the load time of a webpage we first have to know how the browser converts an HTML document into a functional webpage...
+      div.btns
+       span.date 1 Hour Ago
+       a(href="blog-inner.html"  class="btnbottom") 
+        | Read Full
+        svg(xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 11 14")
+         path(d="M1.5 2.66987L9 7L1.5 11.3301L1.5 2.66987Z" stroke-width="2")
+    <!--End item--> 
+    div(class="item wow fadeInUp" data-wow-duration="1s") 
+     a(href="blog-inner.html" class="photo")
+      img(src="images/blog.jpg" alt="") 
+     div.content
+      a(href="blog-inner.html" class="title") Optimizing CSS for faster page loads 
+      p.textlight   Not long ago I decided to improve the loading times of my website. It already loads pretty fast, but I knew there was still room for improvement and one of them was CSS loading. I will walk you through the process and show you how you can improve your load times as well. <br><br>To see how CSS affects the load time of a webpage we first have to know how the browser converts an HTML document into a functional webpage...
+      div.btns
+       span.date 1 Hour Ago
+       a(href="blog-inner.html"  class="btnbottom") 
+        | Read Full
+        svg(xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 11 14")
+         path(d="M1.5 2.66987L9 7L1.5 11.3301L1.5 2.66987Z" stroke-width="2")
+    <!--End item--> 
+   ul(class="pagination w-100 mt-4 wow fadeInUp" data-wow-duration="1s")
+        li(class="page-item")
+         a(class="page-link" href="#") 
+          svg(width="16" height="12" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg")
+           path(d="M5.27438 5.58083L9.89199 0.963231C10.0396 0.810363 10.0354 0.566767 9.88252 0.41913C9.73339 0.2751 9.49699 0.2751 9.34789 0.41913L5.00233 4.76468L0.656779 0.41913C0.506526 0.2689 0.262929 0.2689 0.112677 0.41913C-0.0375528 0.569405 -0.0375529 0.812978 0.112677 0.963231L4.73028 5.58083C4.88056 5.73106 5.12413 5.73106 5.27438 5.58083Z")
+        li(class="page-item")
+         a(class="page-link active" href="#") 1 
+        li(class="page-item")
+         a(class="page-link" href="#") 2
+        li(class="page-item")
+         a(class="page-link" href="#") 3
+        li(class="page-item")
+         a(class="page-link" href="#") 
+          svg(width="16" height="12" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg")
+           path(d="M5.27438 5.58083L9.89199 0.963231C10.0396 0.810363 10.0354 0.566767 9.88252 0.41913C9.73339 0.2751 9.49699 0.2751 9.34789 0.41913L5.00233 4.76468L0.656779 0.41913C0.506526 0.2689 0.262929 0.2689 0.112677 0.41913C-0.0375528 0.569405 -0.0375529 0.812978 0.112677 0.963231L4.73028 5.58083C4.88056 5.73106 5.12413 5.73106 5.27438 5.58083Z") 

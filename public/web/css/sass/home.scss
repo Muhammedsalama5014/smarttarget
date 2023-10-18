@@ -1,0 +1,215 @@
+@import 'helpers/mixins';
+@import 'helpers/variables';
+@import 'layout/header';
+@import 'layout/slider';
+@import 'layout/services';
+@import 'layout/about';
+@import 'layout/news';
+@import 'layout/clients';
+@import 'layout/profile';
+@import 'layout/error404';
+@import 'layout/contactus';
+@import 'layout/footer';
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+hr,
+strong,
+b,
+input,
+select,
+textarea,
+.highcharts-title,
+.highcharts-axis-labels,
+.highcharts-yaxis-title {
+    @include reset;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: $ofwhite;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background-color: $colortitle;
+    cursor: pointer;
+}
+
+body {
+    direction: $direction;
+    text-align: $left;
+    background: $ofwhite url(../images/bg.png) repeat center center;
+    // @include transition(all 0.5s ease-in-out 0s);
+    &.active {
+        overflow: hidden;
+    }
+}
+
+.bottom {
+    @include bottom;
+}
+
+.social {
+    @include social;
+}
+
+.title {
+    @include title;
+}
+
+.wizard {
+    @include wizard-style;
+    margin-bottom: $com-spacing-4;
+    @media (max-width: 991px) {
+        display: $none;
+    }
+}
+
+.form-control {
+    @include input;
+}
+
+.che-box {
+    @include check-box;
+}
+
+.textcenter {
+    @include flex;
+    margin-top: $com-spacing-8*2;
+    @media (max-width: 991px) {
+        margin-top: $com-spacing-6;
+    }
+    p {
+        color: $dark;
+        font-size: 18px;
+        @media (max-width: 991px) {
+            font-size: 14px;
+        }
+    }
+    .bottom {
+        margin: $com-spacing-4 $com-spacing-1 $zero $com-spacing-1;
+    }
+    .st-btn {
+        background: $colortitle;
+        // span {
+        //     color: $blue;
+        //     @include transition(all 0.5s ease-in-out 0s);
+        // }
+    }
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    border: $zero;
+    margin: $zero;
+    margin-bottom: $com-spacing-4;
+    padding: $com-spacing-4;
+    border-radius: 4px;
+    height: 60px;
+    color: $white;
+    a {
+        text-decoration: underline;
+        color: $white;
+        font-weight: 400;
+        &:hover {
+            text-decoration: $none;
+        }
+    }
+    .contant {
+        margin: $zero !important;
+        margin-left: $com-spacing-3 !important;
+    }
+    p {
+        margin: $zero !important;
+        color: $white;
+    }
+    &.alert-success {
+        background: linear-gradient(303.91deg, #1F7A66 7.57%, #60B3A7 94.39%);
+    }
+    &.alert-danger {
+        background: linear-gradient(303.91deg, #C24848 7.57%, #D34A4A 94.39%);
+    }
+}
+
+select.form-control {
+    -webkit-appearance: none;
+    background: url(../images/arrow.svg) no-repeat;
+    background-position: 185px 19px;
+    option {
+        padding: $com-spacing-6;
+    }
+}
+
+.map-back {
+    @include map-back;
+}
+
+.pagination {
+    width: $fullwidth;
+    margin-top: $com-spacing-7;
+    justify-content: center;
+    @media (max-width: 991px) {
+        margin-top: $com-spacing-6;
+    }
+    li {
+        display: $inline;
+        margin: $zero 10px;
+        a,
+        span {
+            @include flex;
+            text-align: center;
+            @include border-radius(5px !important);
+            width: 40px;
+            height: 40px;
+            border: $zero;
+            background: rgba(193, 193, 193, 0.5);
+            color: $dark;
+            @include transition(all 0.5s ease-in-out 0s);
+        }
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+        &:last-child {
+            svg {
+                transform: rotate(-90deg);
+            }
+        }
+        &:first-child {
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+    }
+    .page-link.active,
+    .page-link:hover {
+        background: $blue !important;
+        color: $white !important;
+        svg {
+            fill: $white;
+        }
+    }
+}
+
+///* End Pagination

@@ -1,0 +1,35 @@
+ .error404 {
+     @include section;
+     @include flex;
+     height: 100vh;
+     text-align: center;
+     background: $white url(../images/shape-bottom-left.png) no-repeat bottom left;
+     &::after {
+         content: "";
+         position: absolute;
+         top: $zero;
+         right: $zero;
+         width: 30%;
+         height: 400px;
+         background: url(../images/shape-top-right.png) no-repeat top right;
+         background-size: 100%;
+     }
+     .title {
+         font-size: 150px !important;
+         line-height: 1;
+         &::before {
+             display: $none;
+         }
+     }
+     p {
+         color: $dark;
+         font-size: 24px;
+     }
+     .bottom {
+         margin-top: $com-spacing-6;
+         @media (max-width: 991px) {}
+         &::before {}
+     }
+ }
+ 
+ //* End Error404

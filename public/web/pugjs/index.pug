@@ -1,0 +1,32 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='description' content='Lorem PugJs')
+    meta(name='viewport' content='width=device-width, initial-scale=1,shrink-to-fit=no')
+    meta(name="keywords" content="")
+    title Smart target
+    
+    include ../includes/styles.pug 
+    include ../includes/scripts.pug 
+  body.home
+    block pagemap
+      include ../pugjs/header.pug
+      <!--End Header-->
+      block pageindex
+       include ../pugjs/slider.pug
+       <!--End Slider-->  
+       include ../pugjs/minabout.pug
+       <!--End minabout--> 
+       include ../pugjs/minwork.pug
+       <!--End minwork--> 
+       include ../pugjs/clients.pug
+       <!--End clients--> 
+       include ../pugjs/minarticles.pug
+       <!--End minarticles--> 
+       include ../pugjs/minteams.pug
+       <!--End minteams-->
+       include ../pugjs/mincontact.pug
+       <!--End mincontact-->                
+      include ../pugjs/footer.pug
+      <!--End Footer-->

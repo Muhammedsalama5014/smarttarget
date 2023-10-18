@@ -1,0 +1,255 @@
+.innerservices {
+    @include section;
+    overflow: hidden;
+    .color {
+        bottom: 30%;
+    }
+    .item {
+        &:nth-child(1) {
+            display: flex;
+            align-items: center;
+        }
+        @media (max-width: 991px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+            margin-bottom: $com-spacing-6;
+            &:last-child {
+                margin: $zero;
+            }
+        }
+        .photo {
+            width: $fullwidth;
+            text-align: center;
+            img {
+                max-width: 90%;
+            }
+        }
+        .title {}
+        p {
+            font-size: 18px;
+            @media (max-width: 991px) {
+                font-size: 14px;
+            }
+        }
+        .subtext {
+            display: block;
+            color: $colortitle;
+            font-size: 16px;
+            margin-top: $com-spacing-6;
+            @media (max-width: 991px) {
+                font-size: 14px;
+            }
+        }
+        .bottom {
+            margin-top: $com-spacing-6;
+        }
+    }
+}
+
+.modal {
+    background: #0000007d;
+    .modal-lg {
+        max-width: 1024px;
+        height: $fullwidth;
+        display: flex;
+        align-items: center;
+        margin: $zero $auto;
+        .modal-content {
+            padding: $com-spacing-6;
+            .modal-header {
+                padding: $zero;
+                align-items: center;
+                padding-bottom: $com-spacing-6;
+                .title {
+                    font-weight: 400;
+                    font-size: 26px;
+                }
+                .close {
+                    &:focus {
+                        outline: $zero;
+                    }
+                }
+            }
+            .item {
+                .inpusrach {
+                    .che-box {
+                        span.label-text {
+                            font-size: 14px;
+                        }
+                        input[type="checkbox"]+.label-text:before,
+                        input[type="radio"]+.label-text:before {
+                            top: 3px;
+                        }
+                    }
+                }
+                &:first-child {
+                    .inpusrach {
+                        min-height: $auto;
+                        margin-top: $com-spacing-6;
+                        @media (max-width: 991px) {
+                            max-width: 50%;
+                            flex: 50%;
+                        }
+                        &:last-child {
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slideservic {
+    .photo {
+        width: $fullwidth;
+        height: 44vh;
+        @media (min-width: 1600px) {
+            height: 50vh;
+        }
+        @media (max-width: 991px) {
+            height: 44vh;
+        }
+        img {
+            width: $fullwidth;
+            height: $fullwidth;
+            object-fit: cover;
+        }
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        // padding-top: $com-spacing-6;
+        height: 50vh;
+        .icon {
+            svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .title {
+            font-weight: 400;
+            font-size: 48px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            @media (max-width: 991px) {
+                font-size: 38px;
+            }
+            @media (max-width:767px) {
+                font-size: 22px;
+            }
+        }
+        .subtitle {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            color: $dark;
+            font-size: 32px;
+            font-weight: 400;
+            @media (max-width: 991px) {
+                font-size: 16px;
+            }
+        }
+        p {
+            margin-top: $com-spacing-3;
+            font-size: 18px;
+            font-weight: 400;
+            max-width: 50%;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            @media (max-width: 991px) {
+                font-size: 14px;
+                max-width: $fullwidth;
+            }
+        }
+        .showall {
+            display: inline-flex;
+            align-items: center;
+            margin-top: $com-spacing-3;
+            color: $colortitle;
+            font-size: 18px;
+            @media (max-width: 991px) {
+                font-size: 16px;
+            }
+            svg {
+                margin-left: $com-spacing-2;
+                width: 18px;
+                height: 18px;
+                @include transition(all 0.5s ease-in-out 0s);
+            }
+            &:hover {
+                svg {
+                    margin-left: $com-spacing-3;
+                }
+            }
+        }
+    }
+    .carousel-item {
+        height: calc(100vh - 90px);
+        @media (max-width: 991px) {
+            height: calc(100vh - 60px);
+        }
+    }
+    .a-pos {
+        position: absolute;
+        left: $com-spacing-3;
+        top: 8%;
+        // width: 20px;
+        // height: 200px;
+        @media (max-width: 991px) {
+            left: $auto;
+            right: $com-spacing-3;
+        }
+        .carousel-indicators {
+            position: relative;
+            margin: $zero;
+            display: block;
+            bottom: auto;
+            right: auto;
+            left: auto;
+            li {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: 2px solid $dark;
+                background: $none;
+                margin: $zero;
+                margin-bottom: $com-spacing-1;
+                &:last-child {
+                    margin: $zero;
+                }
+                &.active {
+                    border: 2px solid $colortitle;
+                }
+            }
+        }
+    }
+    .carousel-control-next {
+        right: 0;
+        bottom: auto;
+        top: -20px;
+        width: 12px;
+        height: 12px;
+    }
+    .carousel-control-prev {
+        right: 0;
+        top: auto;
+        bottom: -20px;
+        width: 12px;
+        height: 12px;
+        @include rotate(180deg);
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+        opacity: 1;
+        svg {
+            fill: $dark;
+            width: 12px;
+        }
+    }
+}

@@ -1,0 +1,462 @@
+.header {
+    width: $fullwidth;
+    position: relative;
+    z-index: 1000;
+    @include transition(all 0.5s ease-in-out 0s);
+    background: $ofwhite;
+    @media (max-width: 991px) {
+        padding: $com-spacing-3 $zero;
+    }
+     ::-webkit-scrollbar {
+        width: 1px;
+    }
+    &.sticky {
+        @include position(fixed, $top: 0, $left: 0);
+        @include transition(all 0.5s ease-in-out 0s);
+        // @include prefixer (box-shadow, 4px 4px 60px rgba(0, 0, 0, 0.1), webkit moz o ms);
+        @media (max-width: 991px) {
+            padding: $com-spacing-2 $zero;
+        }
+        .menu-item {
+            padding: $com-spacing-6 $zero;
+            @media (max-width: 991px) {
+                padding: $zero;
+            }
+            &::before {
+                top: 30%;
+            }
+        }
+        .logo img {
+            max-width: 134px;
+            @media (max-width: 991px) {
+                max-width: 94px;
+            }
+        }
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        img {
+            max-width: 200px;
+            @include transition(all 0.5s ease-in-out 0s);
+            @media (max-width: 991px) {
+                max-width: 94px;
+            }
+        }
+    }
+    // Navbar
+    .navbar {
+        padding: $zero;
+        .cancel {
+            display: none;
+            position: absolute;
+            top: $com-spacing-3;
+            right: $com-spacing-3;
+            z-index: 10;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        @media screen and (max-width: 991px) {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 290px;
+            height: 100%;
+            z-index: 10;
+            opacity: 0;
+            overflow: hidden;
+            overflow-y: auto;
+            visibility: hidden;
+            box-shadow: 0px 10px 40px 0px #06163a1a;
+            background: $ofwhite;
+            transition: all 0.5s ease;
+            .menu-link {
+                color: $dark;
+                svg {
+                    fill: $dark;
+                }
+            }
+            &.active {
+                left: 0rem;
+                opacity: 1;
+                visibility: visible;
+            }
+            .cancel {
+                display: block;
+            }
+        }
+    }
+    // Menu
+    .menu {
+        &-item {
+            position: relative;
+            display: inline-block;
+            margin: $zero $com-spacing-2;
+            color: $blak;
+            padding: $com-spacing-7 $zero;
+            @include transition(all 0.5s ease-in-out 0s);
+            @media (max-width: 1199px) {
+                margin: $zero;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: $com-spacing-7;
+                left: $zero;
+                width: $zero;
+                height: 2px;
+                background: $colortitle;
+                @include transition(all 0.5s ease-in-out 0s);
+                @media (max-width: 991px) {
+                    display: none;
+                }
+            }
+        }
+        &-link {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 0.25rem;
+            font-weight: 400;
+            line-height: inherit;
+            cursor: pointer;
+            color: $dark;
+            font-size: 16px;
+            text-transform: capitalize;
+            padding-left: $com-spacing-3;
+            transition: all 0.3s ease-in-out;
+            svg {
+                @include transition(all 0.5s ease-in-out 0s);
+            }
+            @media (max-width: 991px) {
+                color: $white;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: $zero;
+                left: $zero;
+                width: 2px;
+                height: $zero;
+                background: $colortitle;
+                @include transition(all 0.5s ease-in-out 0s);
+                @media (max-width: 991px) {
+                    display: none;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: $zero;
+                width: $zero;
+                height: 2px;
+                background: $colortitle;
+                @include transition(all 0.5s ease-in-out 0s);
+                @media (max-width: 991px) {
+                    display: none;
+                }
+            }
+        }
+        // Responsive Media Query
+        @media only screen and (min-width: 991px) {
+            &-dropdown:hover {
+                >.submenu {
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+        }
+        // Responsive Media Query
+        @media only screen and (max-width: 991px) {
+            width: 100%;
+            height: auto;
+            padding: 1rem 0;
+            &-item {
+                display: block;
+                padding: $zero;
+            }
+            &-link {
+                justify-content: space-between;
+                padding: 0.5rem 1.25rem;
+            }
+        }
+        .activelink,
+        .menu-item:hover {
+            &::before {
+                width: 50%;
+            }
+            .menu-link {
+                color: $colortitle;
+                svg {
+                    @include rotate(-180deg);
+                    fill: $colortitle;
+                }
+                &::before {
+                    height: $fullwidth;
+                }
+                &::after {
+                    width: $fullwidth;
+                }
+            }
+        }
+    }
+    // Submenu
+    .submenu {
+        position: absolute;
+        top: $fullwidth;
+        left: $zero;
+        min-width: 292px;
+        height: auto;
+        padding: $com-spacing-3;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(1rem);
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.80) !important;
+        transition: all 0.3s ease-in-out;
+        .submenu-item {
+            display: block;
+        }
+        .submenu-link {
+            position: relative;
+            display: block;
+            // font-weight: 400;
+            cursor: pointer;
+            color: $white;
+            background: url(../images/i.png) no-repeat left center;
+            padding-left: $com-spacing-5;
+            text-transform: uppercase;
+            transition: all 0.35s ease;
+            @media (max-width: 991px) {
+                background: url(../images/i2.png) no-repeat left center;
+                color: $dark;
+            }
+            &:hover {
+                outline: none;
+                color: $colortitle;
+            }
+        }
+        // Responsive Media Query
+        @media only screen and (max-width: 991px) {
+            position: relative;
+            top: $zero;
+            right: $zero;
+            width: 100%;
+            max-height: 0;
+            padding: 0px;
+            border: none;
+            outline: none;
+            opacity: 1;
+            overflow: hidden;
+            visibility: visible;
+            transform: translateY(0px);
+            box-shadow: none;
+            background: #f3f3f3 !important;
+            border-radius: $zero;
+            padding: $zero $com-spacing-5;
+            .submenu-link {
+                padding: $com-spacing-2 $zero $com-spacing-2 $com-spacing-5;
+            }
+        }
+    }
+    // Burger
+    .burger {
+        position: absolute;
+        left: 116px;
+        display: none;
+        cursor: pointer;
+        user-select: none;
+        width: 1.75rem;
+        height: 1rem;
+        opacity: 0;
+        visibility: hidden;
+        background: transparent;
+        &-line {
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            opacity: 1;
+            border: none;
+            outline: none;
+            background: $dark;
+            &:nth-child(1) {
+                top: 0px;
+            }
+            &:nth-child(2) {
+                top: 0.5rem;
+                width: 80%;
+            }
+            &:nth-child(3) {
+                top: 1rem;
+                width: 60%;
+            }
+        }
+        // Responsive Media Query
+        @media only screen and (max-width: 991px) {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    // Overlay
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 9;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.35s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.65);
+        // Responsive Media Query
+        @media only screen and (max-width: 991px) {
+            &.active {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    .icon {
+        display: flex;
+        align-items: center;
+        .searchicon {
+            cursor: pointer;
+            margin-right: $com-spacing-3;
+            svg {
+                path {
+                    fill: #202043;
+                }
+            }
+        }
+        .bottom {}
+    }
+    .showboxsearch {
+        display: $none;
+        @include position(absolute, $top: $fullwidth, $right: $com-spacing-3);
+        width: 344px;
+        z-index: 1000;
+        @media (max-width: 991px) {
+            top: 49px;
+        }
+        @media (max-width:550px) {
+            width: calc(100% - 24px);
+        }
+        .formsearch {
+            width: $fullwidth;
+            position: relative;
+        }
+        .form-control {
+            height: 50px;
+            width: $fullwidth;
+            @include border-radius(10px);
+            border: $zero;
+            box-shadow: $none;
+            outline: $none;
+            background: $textlight;
+            text-transform: $none;
+            padding: $zero;
+            padding: $zero 70px $zero $com-spacing-3;
+            font-weight: 400;
+        }
+        .bottom {
+            @include position(absolute, $top: $com-spacing-2, $right: $com-spacing-4);
+            width: 32px;
+            height: 32px;
+            padding: $zero;
+            background: $none;
+            @include border-radius($zero);
+            &::before {
+                display: none;
+            }
+            svg {
+                max-width: 28px;
+            }
+        }
+    }
+}
+
+.color {
+    position: absolute;
+    display: flex;
+    background: $textlight;
+    border-radius: 60px;
+    left: -34px;
+    bottom: 16%;
+    width: 126px;
+    z-index: 998;
+    @include rotate(-90deg);
+    @include prefixer (box-shadow, 4px 4px 60px rgba(0, 0, 0, 0.1), webkit moz o ms);
+    li {
+        @include flex;
+        position: relative;
+        cursor: pointer;
+        border-radius: 60px;
+        width: 60px;
+        height: 36px;
+        @include transition(all 0.5s ease-in-out 0s);
+        &:nth-child(2) {
+            order: -1;
+        }
+        span {
+            display: none;
+            margin-right: $com-spacing-1;
+            text-transform: uppercase;
+            color: $blak;
+        }
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: $blak;
+            @include transition(all 0.5s ease-in-out 0s);
+        }
+        &.active {
+            background: $white !important;
+            min-width: 94px;
+            span {
+                display: block;
+                color: $blak;
+            }
+            svg {
+                fill: $blak;
+            }
+        }
+    }
+}
+
+///* End colors
+.iconssocial {
+    position: absolute;
+    display: flex;
+    right: -134px;
+    bottom: 34%;
+    width: 328px;
+    z-index: 998;
+    @include rotate(-90deg);
+    @media (max-width: 991px) {
+        display: $none;
+    }
+    p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-family: 'Noto Sans Arabic', sans-serif;
+        font-size: 20px;
+        font-weight: 100;
+        color: $white;
+        text-transform: capitalize;
+        @include transition(all 0.5s ease-in-out 0s);
+    }
+}
